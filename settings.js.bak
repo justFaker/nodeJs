@@ -1,0 +1,6 @@
+module.exports = {
+     cookieSecret: 'orders',
+     db: 'todo_development',
+     host: 'localhost',
+     port: 27017
+   }

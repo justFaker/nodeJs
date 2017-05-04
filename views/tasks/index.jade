@@ -1,0 +1,31 @@
+extends ../layout
+
+block content
+  h1 Your tasks
+  p
+    a(href='/tasks/new', class='btn btn-primary') Add a Task
+  
+  - if (infos)
+     p #{infos}
+  - if (errors)
+     p #{errors}
+
+  - if (docs.length)
+    table.table
+      tr
+        th Task
+        th &nbsp;
+        th &nbsp;
+          each task in docs
+            tr
+              td #{task.name}
+              td
+                a.btn.btn-default(href='/tasks/#{task.id}/edit') Edit
+              td
+                form(method='post', action='/tasks/' + task.id+'?_method=delete')
+                  button.btn.btn-danger(type='submit') Delete
+                 
+                 
+
+  - else
+    p You don't have any tasks! 
