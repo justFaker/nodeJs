@@ -5,7 +5,11 @@
  */
 
 var app = require('../app');
+<<<<<<< HEAD
 var debug = require('debug')('express-example:server');
+=======
+var debug = require('debug')('connect-to-mongo:server');
+>>>>>>> f5c62399008fd3506b92ba5a3eeefaf9944b2003
 var http = require('http');
 
 /**
